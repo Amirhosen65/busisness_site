@@ -4,75 +4,34 @@
 
 <div>
     <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-12">
             <div class="card card-default">
+
                 <div class="card-header card-header-border-bottom">
                     <h2>Social Link</h2>
                 </div>
                 <div class="card-body">
-                    {{-- <form action="{{ route('contact.info.update',$contact_info->id) }}" method="POST"> --}}
-                        @csrf
-                        <div class="form-group">
-                            <label for="exampleFormControlInput1">Facebook</label>
-                            <textarea class="form-control @error('phone') is-invalid @enderror" name="phone" id="" cols="10" rows="5"></textarea>
-                            @error('phone')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                            @enderror
+                    <form >
+                        <label class="text-dark font-weight-medium" for="">Account Type</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <select class="form-control" id="exampleFormControlSelect12" name="account">
+                                    <option value="1">Facebook</option>
+                                    <option value="2">X (Formerly Twitter)</option>
+                                    <option value="3">Instagram</option>
+                                    <option value="4">Linkedin</option>
+                                    <option value="5">Youtube</option>
+                                    <option value="6">WhatsApp</option>
+                                </select>
+                            </div>
+                            <input type="text" name="url" placeholder="Url" class="form-control" aria-label="Text input with dropdown button">
                         </div>
-                        <div class="form-group">
-                            <label for="exampleFormControlInput1">Linkedin</label>
-                            <textarea class="form-control @error('email') is-invalid @enderror" name="email" id="" cols="10" rows="5"></textarea>
-                            @error('email')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                            @enderror
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleFormControlInput1">Twitter</label>
-                            <textarea class="form-control @error('address') is-invalid @enderror" name="address" id="" cols="10" rows="5"></textarea>
-                            @error('address')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                            @enderror
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleFormControlInput1">Instagram</label>
-                            <textarea class="form-control @error('address') is-invalid @enderror" name="address" id="" cols="10" rows="5"></textarea>
-                            @error('address')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                            @enderror
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleFormControlInput1">Github</label>
-                            <textarea class="form-control @error('address') is-invalid @enderror" name="address" id="" cols="10" rows="5"></textarea>
-                            @error('address')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                            @enderror
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleFormControlInput1">YouTube</label>
-                            <textarea class="form-control @error('address') is-invalid @enderror" name="address" id="" cols="10" rows="5"></textarea>
-                            @error('address')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                            @enderror
-                        </div>
-
                         <div class="form-footer pt-4 pt-5 mt-4 border-top">
-                            <button type="submit" class="btn btn-primary btn-default">Update</button>
-
+                            <button type="submit" class="btn btn-primary btn-default">Save</button>
                         </div>
                     </form>
                 </div>
+
             </div>
 
 
