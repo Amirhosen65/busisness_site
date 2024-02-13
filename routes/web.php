@@ -95,5 +95,6 @@ Route::get('/contact', [HomeController::class, 'contact'])->name('frontend.conta
 
 // Settings
 Route::get('/dashboard/social/link', [SocialLinkController::class, 'social_link'])->name('dashboard.social.link');
+Route::post('/dashboard/social/insert', [SocialLinkController::class, 'social_insert'])->name('dashboard.social.insert');
 
 

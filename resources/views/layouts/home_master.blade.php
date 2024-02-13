@@ -148,10 +148,13 @@
         </div>
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <a href="https://www.facebook.com/amirhosen.65" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="https://www.linkedin.com/in/aj-amir/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        @foreach ($social_link as $link)
+            <a href="{{ $link->url }}" class="{{ $link->account }}"><i class="bx bxl-{{ $link->account }}"></i></a>
+        @endforeach
+        {{-- <a href="https://www.linkedin.com/in/aj-amir/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
         <a href="https://github.com/Amirhosen65" class="github"><i class="bx bxl-github"></i></a>
         <a href="https://youtube.com/@AJAmir/" class="youtube"><i class="bx bxl-youtube"></i></a>
+        <a href="https://youtube.com/@AJAmir/" class="twitter"><i class="bx bxl-twitter"></i></a> --}}
       </div>
     </div>
   </footer><!-- End Footer -->

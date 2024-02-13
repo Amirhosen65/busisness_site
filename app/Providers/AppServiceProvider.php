@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Models\Contact;
 use App\Models\ContactInfo;
+use App\Models\SocialLink;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -75,13 +76,14 @@ class AppServiceProvider extends ServiceProvider
     "fa fa-vk", "fa fa-volume-control-phone", "fa fa-volume-down", "fa fa-volume-off", "fa fa-volume-up", "fa fa-weibo", "fa fa-weixin", "fa fa-whatsapp", "fa fa-wheelchair", "fa fa-wheelchair-alt", "fa fa-wifi", "fa fa-wikipedia-w", "fa fa-window-close",
     "fa fa-window-close-o", "fa fa-window-maximize", "fa fa-window-minimize", "fa fa-window-restore", "fa fa-windows", "fa fa-wordpress", "fa fa-wpbeginner", "fa fa-wpexplorer", "fa fa-wpforms", "fa fa-wrench", "fa fa-xing", "fa fa-xing-square",
     "fa fa-y-combinator", "fa fa-yahoo", "fa fa-yelp", "fa fa-yoast", "fa fa-youtube", "fa fa-youtube-play", "fa fa-youtube-square"];
+    view()->share('ficons', $ficons);
 
         $footer_contact = ContactInfo::get()->first();
-
         view()->share('footer_contact', $footer_contact);
 
+        $social_link = SocialLink::get();
+        view()->share('social_link', $social_link);
         // view()->share('identy', $identy);
-        view()->share('ficons', $ficons);
     }
 }
 

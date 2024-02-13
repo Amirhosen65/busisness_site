@@ -14,7 +14,7 @@ class BrandController extends Controller
     {
         $this->middleware('auth');
     }
-    
+
     public function index(){
         $brands = Brand::latest()->paginate(10);
         return view('admin.brand.index',compact('brands'));
@@ -28,8 +28,6 @@ class BrandController extends Controller
         ],[
             'brand_name.required'=> 'Please insert brand name.',
         ]);
-
-
 
         if($request->hasFile('image')){
             $brand_image = $request->file('image');
